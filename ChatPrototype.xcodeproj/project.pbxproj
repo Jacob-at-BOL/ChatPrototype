@@ -11,6 +11,12 @@
 		163833EF2C5217F000FA2C7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163833EE2C5217F000FA2C7F /* ContentView.swift */; };
 		163833F12C5217F600FA2C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163833F02C5217F600FA2C7F /* Assets.xcassets */; };
 		163833F42C5217F600FA2C7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163833F32C5217F600FA2C7F /* Preview Assets.xcassets */; };
+		163833FB2C52C79700FA2C7F /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163833FA2C52C79700FA2C7F /* WelcomePage.swift */; };
+		163833FD2C52C90100FA2C7F /* FeaturesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163833FC2C52C90100FA2C7F /* FeaturesPage.swift */; };
+		163833FF2C52C95A00FA2C7F /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163833FE2C52C95A00FA2C7F /* FeatureCard.swift */; };
+		163834012C52CF6B00FA2C7F /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163834002C52CF6B00FA2C7F /* DiceView.swift */; };
+		163834032C52DDD700FA2C7F /* DiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163834022C52DDD700FA2C7F /* DiceApp.swift */; };
+		163834082C52DEB400FA2C7F /* PickAPal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163834072C52DEB400FA2C7F /* PickAPal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		163833EE2C5217F000FA2C7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		163833F02C5217F600FA2C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163833F32C5217F600FA2C7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		163833FA2C52C79700FA2C7F /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		163833FC2C52C90100FA2C7F /* FeaturesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesPage.swift; sourceTree = "<group>"; };
+		163833FE2C52C95A00FA2C7F /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
+		163834002C52CF6B00FA2C7F /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		163834022C52DDD700FA2C7F /* DiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceApp.swift; sourceTree = "<group>"; };
+		163834072C52DEB400FA2C7F /* PickAPal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAPal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,11 @@
 		163833EB2C5217F000FA2C7F /* ChatPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				163834052C52DE3E00FA2C7F /* Features */,
 				163833EC2C5217F000FA2C7F /* ChatPrototypeApp.swift */,
 				163833EE2C5217F000FA2C7F /* ContentView.swift */,
+				163834062C52DE5B00FA2C7F /* Pick-A-Pal */,
+				163834042C52DE2300FA2C7F /* Dice */,
 				163833F02C5217F600FA2C7F /* Assets.xcassets */,
 				163833F22C5217F600FA2C7F /* Preview Content */,
 			);
@@ -65,6 +80,33 @@
 				163833F32C5217F600FA2C7F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		163834042C52DE2300FA2C7F /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				163834002C52CF6B00FA2C7F /* DiceView.swift */,
+				163834022C52DDD700FA2C7F /* DiceApp.swift */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
+		163834052C52DE3E00FA2C7F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				163833FA2C52C79700FA2C7F /* WelcomePage.swift */,
+				163833FC2C52C90100FA2C7F /* FeaturesPage.swift */,
+				163833FE2C52C95A00FA2C7F /* FeatureCard.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		163834062C52DE5B00FA2C7F /* Pick-A-Pal */ = {
+			isa = PBXGroup;
+			children = (
+				163834072C52DEB400FA2C7F /* PickAPal.swift */,
+			);
+			path = "Pick-A-Pal";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163834032C52DDD700FA2C7F /* DiceApp.swift in Sources */,
+				163833FB2C52C79700FA2C7F /* WelcomePage.swift in Sources */,
+				163834012C52CF6B00FA2C7F /* DiceView.swift in Sources */,
+				163833FD2C52C90100FA2C7F /* FeaturesPage.swift in Sources */,
 				163833EF2C5217F000FA2C7F /* ContentView.swift in Sources */,
 				163833ED2C5217F000FA2C7F /* ChatPrototypeApp.swift in Sources */,
+				163834082C52DEB400FA2C7F /* PickAPal.swift in Sources */,
+				163833FF2C52C95A00FA2C7F /* FeatureCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
