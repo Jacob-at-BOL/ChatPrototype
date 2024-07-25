@@ -15,13 +15,27 @@ struct PickAPal: View {
     
     var body: some View {
         VStack {
+            VStack {
+                Image(systemName: "person.3.sequence.fill")
+                    .foregroundStyle(.tint)
+                    .symbolRenderingMode(.hierarchical)
+                
+                Text("Pick-a-Pal")
+            }
+            .font(.title)
+            .bold()
+            
             Text(pickedName.isEmpty ? " " : pickedName)
+                .font(.title2)
+                .bold()
+                .foregroundStyle(.tint)
             
             List {
                 ForEach(names, id: \.self) {name in
                     Text(name)
                 }
             }
+            .clipShape(RoundedRectangle(cornerRadius: 8))
             
             TextField("Add Name", text: $nameToAdd)
                 .onSubmit {
