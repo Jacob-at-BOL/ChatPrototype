@@ -1,34 +1,27 @@
 //
-//  ContentView.swift
+//  FriendsApp.swift
 //  ChatPrototype
 //
-//  Created by Jacob on 7/25/24.
+//  Created by jacob simpson on 7/26/24.
 //
 
 import SwiftUI
 import SwiftData
 
-let gradientColors: [Color] = [
-    .gradientTop,
-    .gradientBottom
-]
-
-struct ContentView: View {
-    @Query(sort: \Friend.birthday) private var friends: [Friend]
-    @Environment(\.modelContext) private var context
+struct FriendsApp: View {
+    @State private var friends: [Friend] = [
+        Friend(name: "John Doe", birthday: .now),
+        Friend(name: "Jane Doe", birthday: Date(timeIntervalSince1970: 0))
+    ]
     
     @State private var newName: String = ""
     @State private var newDate: Date = Date.now
     
     var body: some View {
         NavigationStack {
-            List(friends) { friend in
+            List(friends, id: \.name) { friend in
                 HStack {
-                    if friend.isBirthdayToday {
-                        Image(systemName: "birthday.cake")
-                    }
                     Text(friend.name)
-                        .bold(friend.isBirthdayToday)
                     Spacer()
                     Text(friend.birthday, format: .dateTime.month(.wide).day().year())
                 }
@@ -46,7 +39,7 @@ struct ContentView: View {
                     
                     Button("Save") {
                         let newFriend = Friend(name: newName, birthday: newDate)
-                        context.insert(newFriend)
+                        friends.append(newFriend)
                         
                         newName = ""
                         newDate = .now
@@ -61,6 +54,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    FriendsApp()
         .modelContainer(for: Friend.self, inMemory: true)
 }
